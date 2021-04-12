@@ -1,0 +1,43 @@
+/*Create a simple login program where the user inputs ID # and PIN */
+#include<stdio.h>
+
+int main()
+{
+int ID [3][2]= { 
+    /*Pins  ID#s*/
+ 
+  {10022,9999}, /*1st user*/
+    {10023,8888}, /*2nd user*/
+    {10024,3456} 
+     
+ }; /*3rd user*/
+int user, password;
+
+               /*input the data*/ 
+
+ printf("Enter ID number: ");
+scanf("%d", &user);
+ printf("Enter password: ");
+scanf("%d",&password);
+
+               /*Validating the data*/
+
+if(user == ID [0][0] && password == ID [0][1]){      /*1st user's data*/
+   
+    printf("\nYou have Successfully Logged In\n");   
+    printf("ID# : %d\n", ID[0][0]);
+    }
+else if (user == ID[1][0] && password == ID[1][1]){  /*2nd user's data*/
+   
+    printf("\nYou have Successfully Logged In\n");
+    printf("ID# : %d\n", ID[1][0]);
+    }
+else if (user == ID[2][0] && password == ID[2][1]){  /*3rd user's data*/
+    
+    printf("\nYou have Successfully Logged In\n");
+    printf("ID# : %d\n", ID[2][0]);
+    }
+else { printf("\nInvalid ID/PIN!\n"); } /*if the inputted data is invalid*/
+
+return 0;
+}
